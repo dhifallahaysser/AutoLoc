@@ -29,6 +29,6 @@ public class Reservation {
     @ManyToOne
     Client client;
 
-    @OneToOne(mappedBy = "reservation", cascade = CascadeType.ALL)
+    @OneToOne
     Contrat contrat;
 }

@@ -33,7 +33,7 @@ public class Vehicule {
     @ManyToOne
     Agence agence;
 
-    @OneToMany(mappedBy = "vehicule", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "vehicule" )
     List<Maintenance> maintenances = new ArrayList<>();
 
     @ManyToMany
@@ -44,6 +44,6 @@ public class Vehicule {
     )
     List<Equipement> equipements = new ArrayList<>();
 
-    @OneToMany(mappedBy = "vehicule", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "vehicule")
     List<Reservation> reservations = new ArrayList<>();
 }

@@ -5,6 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import tn.esprit.aysserdhifallah4emiot3.Domain.Vehicule;
 
-public interface IVehiculerepositories extends JpaRepository
+public interface IVehiculerepositories extends JpaRepository<Vehicule,Long>
 {
+
 }

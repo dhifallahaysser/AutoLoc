@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface IVehiculeService {
     Vehicule createVehicule(Vehicule vehicule);
-    Vehicule getVehiculeById(int id);
-    void updateVehicule(Vehicule vehicule);
-    void deleteVehiculeById(int id);
+    Vehicule getVehiculeById(Long id);
+    Vehicule updateVehicule(Vehicule vehicule);
+    void deleteVehiculeById(Long id);
     List<Vehicule> getAllVehicules();
 
 }

@@ -35,4 +35,16 @@ public class VehiculeRestController {
     public List<Vehicule> getAllVehicules() {
         return vehiculeservice.getAllVehicules();
     }
+    @PutMapping("/{idVehicule}/agence/{idAgence}")
+    public Vehicule assignVehiculeToAgence(@PathVariable long idVehicule, @PathVariable Long idAgence) {
+        return vehiculeservice.assignVehiculeToAgence(idVehicule, idAgence);
+    }
+    @PutMapping("/{idVehicule}/equipement/{idEquipement}")
+    public Vehicule assignVehiculeToEquipement(
+            @PathVariable("idVehicule") long idVehicule,
+            @PathVariable("idEquipement") long idEquipement) {
+
+        return vehiculeservice.assignVehiculeToEquipement(
+                idVehicule, idEquipement);
+    }
 }

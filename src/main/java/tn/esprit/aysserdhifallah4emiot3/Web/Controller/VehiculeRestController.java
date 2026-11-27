@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.aysserdhifallah4emiot3.Domain.Agence;
 import tn.esprit.aysserdhifallah4emiot3.Domain.Vehicule;
 import tn.esprit.aysserdhifallah4emiot3.Services.Impls.Vehiculeservice;
 
@@ -46,5 +47,9 @@ public class VehiculeRestController {
 
         return vehiculeservice.assignVehiculeToEquipement(
                 idVehicule, idEquipement);
+    }
+    @PostMapping("/{idAgence}")
+    public Vehicule addVehiculeAndAssigneTOAgence(@RequestBody Vehicule vehicule,@PathVariable("idAgence") Long idAgence) {
+        return vehiculeservice.addVehiculeAndAssigneTOAgence(vehicule, idAgence);
     }
 }

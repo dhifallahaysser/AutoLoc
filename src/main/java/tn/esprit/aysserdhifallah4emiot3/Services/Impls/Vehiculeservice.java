@@ -67,4 +67,11 @@ public class Vehiculeservice implements IVehiculeService {
         }
         return vehiculeerepository.save(vehicule);
     }
+
+    @Override
+    public Vehicule addVehiculeAndAssigneTOAgence(Vehicule vehicule, Long idAgence) {
+        Agence agence = agenceRepository.findById(idAgence).orElse(null);
+        vehicule.setAgence(agence);
+        return vehiculeerepository.save(vehicule);
+    }
 }

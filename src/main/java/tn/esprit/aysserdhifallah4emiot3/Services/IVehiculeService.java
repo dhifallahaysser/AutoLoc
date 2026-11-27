@@ -12,4 +12,5 @@ public interface IVehiculeService {
     List<Vehicule> getAllVehicules();
     Vehicule assignVehiculeToAgence(Long idVehicule, Long idAgence);
     Vehicule assignVehiculeToEquipement(Long idVehicule, Long idEquipement);
+    Vehicule addVehiculeAndAssigneTOAgence(Vehicule vehicule, Long idAgence);
 }
